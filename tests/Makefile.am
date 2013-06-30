@@ -62,6 +62,10 @@ MODFILES = \
 	example2long_use_dll.mod \
 	t_sgu_ex1.mod \
 	irfs/example1_unit_std.mod \
+	irfs/example1_irf_singular_cov_mat.mod \
+	irfs/example1_irf_user_spec_shocks.mod \
+	irfs/ex1_user_shocks_std_mult_diag.mod \
+	irfs/ex1_user_shocks_std_mult.mod \
 	optimal_policy/OSR/osr_example.mod \
 	optimal_policy/OSR/osr_example_objective_correctness.mod \
 	optimal_policy/OSR/osr_example_obj_corr_non_stat_vars.mod \
@@ -820,6 +824,8 @@ EXTRA_DIST = \
 	optimal_policy/Ramsey/oo_ramsey_policy_initval.mat \
 	optimizers/optimizer_function_wrapper.m \
 	optimizers/fs2000.common.inc \
+	irfs/setshocksandnames.m \
+	irfs/setshocksandnames_std_err_mult.m \
 	estimation/MH_recover/fs2000.common.inc \
 	prior_posterior_function/posterior_function_demo.m
 
