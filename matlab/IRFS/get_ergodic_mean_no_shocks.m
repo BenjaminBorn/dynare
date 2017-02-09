@@ -79,3 +79,7 @@ while abs_change_EM >options_.irf_opt.EM.tolf && iter<20
     abs_change_EM=max(abs(ergodicmean_no_shocks-out_noshock(:,end-500)));
     iter=iter+1;
 end
+if iter==20
+    [junk,index]=max(abs(ergodicmean_no_shocks-out_noshock(:,end-500)));
+    error('Ergodic mean in the absence of shocks could not be computed. No convergence was achieved for variable %s',M_.endo_names(index,:));
+end
