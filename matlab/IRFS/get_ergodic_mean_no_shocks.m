@@ -83,3 +83,11 @@ if iter==20
     [junk,index]=max(abs(ergodicmean_no_shocks-out_noshock(:,end-500)));
     error('Ergodic mean in the absence of shocks could not be computed. No convergence was achieved for variable %s',M_.endo_names(index,:));
 end
+if options_.debug
+    skipline()
+    disp('ERGODIC MEAN IN THE ABSENCE OF SHOCKS:')
+    skipline()
+    for variter=1:M_.orig_endo_nbr
+        fprintf('%s \t\t %g\n',M_.endo_names(variter,:),ergodicmean_no_shocks(variter));
+    end
+end
